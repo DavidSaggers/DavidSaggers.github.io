@@ -21,6 +21,7 @@ a {
 .linktext {
     font-size: 45px;
     color: white;
+    cursor: pointer;
 }
 
 @keyframes fadein {

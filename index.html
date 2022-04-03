@@ -7,17 +7,24 @@
     <title>Document</title>
     <link rel="stylesheet" href="index.css">
 </head>
-<body id="page">
-<div class="text">
-    <div>Index Page</div>
-    <div class="linktext"><a onclick="fade()">Continue</a></div>
+<body id="page" onload="movetext()">
+<div class="topnav">
+    <div class="home">Home</div>
+    <!-- <div class="linktext"><a onclick="fade()">Continue</a></div> -->
 </div>
 
 <script>
-    function fade() {
-      document.getElementById("page").style.opacity = "0%";
-      document.getElementById("page").style.transition = "300ms";
-      setTimeout( function() { window.location = "content.html" }, 300 );
+    // function fade() {
+    //   document.getElementById("page").style.opacity = "0%";
+    //   document.getElementById("page").style.transition = "300ms";
+    //   setTimeout( function() { window.location = "content.html" }, 300 );
+    // }
+
+    function movetext() {
+        setTimeout(function() {
+        document.getElementById("page").style.transform = "translateY(64px)";
+        document.getElementById("page").style.transition = "2s";
+    }, 1000);
     }
 </script>
 

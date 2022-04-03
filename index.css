@@ -1,15 +1,23 @@
 body {
     background-color: rgb(15, 15, 15);
+    margin: 0;
+    padding: 0;
 }
 
-.text {
-    text-align: center;
+.topnav {
     color: white;
-    font-weight: bolder;
-    margin-top: 250px;
-    font-size: 80px;
+    background-color: rgba(255, 255, 255, 0.575);
     animation: fadein 2s;
     -webkit-animation: fadein 2s;
+    position: fixed;
+    width: 100%;
+    top: -64px;
+}
+
+.home {
+    font-weight: bolder;
+    padding: 12px;
+    font-size: 35px;
 }
 
 a {
