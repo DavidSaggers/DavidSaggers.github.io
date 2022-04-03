@@ -7,9 +7,19 @@
     <title>Document</title>
     <link rel="stylesheet" href="content.css">
 </head>
-<body>
+<body id="page">
 <div class="text">
-    Content
+    <div>Content</div>
+    <div class="linktext" onclick="fade()">Back</div>
 </div>
+
+<script>
+    function fade() {
+      document.getElementById("page").style.opacity = "0%";
+      document.getElementById("page").style.transition = "300ms";
+      setTimeout( function() { window.location = "index.html" }, 300 );
+    }
+</script>
+
 </body>
 </html>

@@ -12,6 +12,17 @@ body {
     -webkit-animation: fadein 2s;
 }
 
+a {
+    text-decoration: none;
+    color: white;
+    cursor: pointer;
+}
+
+.linktext {
+    font-size: 45px;
+    color: white;
+}
+
 @keyframes fadein {
     from { opacity: 0; }
     to   { opacity: 1; }
