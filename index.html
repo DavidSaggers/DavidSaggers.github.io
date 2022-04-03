@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body id="page">
+<div class="text">
+    <div>Index Page</div>
+    <div class="linktext"><a onclick="fade()">Continue</a></div>
+</div>
+
+<script>
+    function fade() {
+      document.getElementById("page").style.opacity = "0%";
+      document.getElementById("page").style.transition = "300ms";
+      setTimeout( function() { window.location = "content.html" }, 300 );
+    }
+</script>
+
+</body>
+</html>

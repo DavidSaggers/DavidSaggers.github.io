@@ -1,0 +1,22 @@
+body {
+    background-color: rgb(15, 15, 15);
+}
+
+.text {
+    text-align: center;
+    color: white;
+    font-weight: bolder;
+    margin-top: 250px;
+    font-size: 80px;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+    cursor: pointer;
+}
+
+.linktext {
+    font-size: 45px;
+    color: white;
+}
