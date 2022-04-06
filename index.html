@@ -7,24 +7,66 @@
     <title>Document</title>
     <link rel="stylesheet" href="index.css">
 </head>
-<body id="page" onload="movetext()">
-<div class="topnav">
+<body id="page" onload="opacityandtranslate()">
+<div class="all" id="allid">
+<div class="topnav" id="topnavid">
     <div class="home">Home</div>
-    <!-- <div class="linktext"><a onclick="fade()">Continue</a></div> -->
+    <div class="navlinks">
+    <a href="index.html">Page 1</a>
+    <a href="index.html">Page 2</a>
+    <a href="index.html">Page 3</a>
+    </div>
+</div>
+
+<div class="pagecontent">
+
+    <div class="leftcontent">
+        <div id="lefttextid" class="lefttext">
+        <div class="myname">Name Here</div>
+        <div class="introduction">This is the area information will be</div>
+        </div>
+        <div id="continuebuttonid" class="continuebutton" onclick="fade()">Continue</div>
+    </div>
+
+    <div class="rightcontent" id="rightcontentid">
+        <img src="picture.png">
+        <p>(Picture Here)</p>
+    </div>
+</div>
 </div>
 
 <script>
-    // function fade() {
-    //   document.getElementById("page").style.opacity = "0%";
-    //   document.getElementById("page").style.transition = "300ms";
-    //   setTimeout( function() { window.location = "content.html" }, 300 );
-    // }
-
-    function movetext() {
+    function opacityandtranslate() {
         setTimeout(function() {
-        document.getElementById("page").style.transform = "translateY(64px)";
-        document.getElementById("page").style.transition = "2s";
-    }, 1000);
+        document.getElementById("lefttextid").style.transform = "translateY(64px)";
+        document.getElementById("lefttextid").style.opacity = "100%";
+        document.getElementById("lefttextid").style.transition = "2s";
+    }, 250);
+
+        setTimeout(function() {
+        document.getElementById("rightcontentid").style.transform = "translateY(64px)";
+        document.getElementById("rightcontentid").style.opacity = "100%";
+        document.getElementById("rightcontentid").style.transition = "2s";
+    }, 750);
+
+        setTimeout(function() {
+        document.getElementById("topnavid").style.transform = "translateY(64px)";
+        document.getElementById("topnavid").style.opacity = "100%";
+        document.getElementById("topnavid").style.transition = "2s";
+    }, 1500);
+
+        setTimeout(function() {
+        document.getElementById("continuebuttonid").style.opacity = "100%";
+        document.getElementById("continuebuttonid").style.transition = "2s";
+        document.getElementById("continuebuttonid").style.cursor = "pointer";
+    }, 2500);
+        document.getElementById("continuebuttonid").style.transform = "translateY(64px)";
+    }
+
+    function fade() {
+      document.getElementById("allid").style.opacity = "0%";
+      document.getElementById("allid").style.transition = "1s";
+      setTimeout( function() { window.location = "content.html" }, 1000 );
     }
 </script>
 

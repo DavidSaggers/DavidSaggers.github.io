@@ -8,12 +8,26 @@
     <link rel="stylesheet" href="content.css">
 </head>
 <body id="page">
+    <div class="topnav" id="topnavid">
+        <div class="home">Home</div>
+        <div class="navlinks">
+        <a href="index.html">Page 1</a>
+        <a href="index.html">Page 2</a>
+        <a href="index.html">Page 3</a>
+        </div>
+    </div>
 <div class="text">
     <div>Content</div>
     <div class="linktext" onclick="fade()">Back</div>
 </div>
 
 <script>
+    setTimeout(function() {
+        document.getElementById("topnavid").style.transform = "translateY(64px)";
+        document.getElementById("topnavid").style.opacity = "100%";
+        document.getElementById("topnavid").style.transition = "2s";
+    }, 1500);
+    
     function fade() {
       document.getElementById("page").style.opacity = "0%";
       document.getElementById("page").style.transition = "300ms";
