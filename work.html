@@ -16,7 +16,7 @@
             <div href="index.html" id="navshowreelbutton" onclick="fadetoshowreel()">Show Reel</div>
         </div>
     </div>
-    <div class="pagecontent">
+    <div class="pagecontent" id="pagecontentid">
         <div class="onpagebuttons" id="onpagebuttonsid">
         <div class="leftcontent">
             <div id="leftnavbuttonid" class="leftnavbutton" onclick="fadetoshowreel()">&lt;&lt;&lt; Show Reel</div>
@@ -37,20 +37,15 @@
     </div>
     </div>
 <script>
-    setTimeout(function() {
-        document.getElementById("topnavid").style.transform = "translateY(64px)";
-        document.getElementById("topnavid").style.transition = "2s";
-    }, 200);
-    
     function fadetoshowreel() {
-      document.getElementById("page").style.opacity = "0%";
-      document.getElementById("page").style.transition = "300ms";
+      document.getElementById("pagecontentid").style.opacity = "0%";
+      document.getElementById("pagecontentid").style.transition = "300ms";
       setTimeout( function() { window.location = "showreel.html" }, 300 );
     }
 
     function fadetointroduction() {
-      document.getElementById("page").style.opacity = "0%";
-      document.getElementById("page").style.transition = "300ms";
+      document.getElementById("pagecontentid").style.opacity = "0%";
+      document.getElementById("pagecontentid").style.transition = "300ms";
       setTimeout( function() { window.location = "introduction.html" }, 300 );
     }
 

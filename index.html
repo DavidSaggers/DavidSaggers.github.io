@@ -12,14 +12,13 @@
 <div class="topnav" id="topnavid">
     <div class="home"><a href="index.html">Home</a></div>
     <div class="navlinks">
-        <div href="introduction.html" id="navintrobutton" onclick="fadetointroduction()"><b>Introduction</b></div>
+        <div href="introduction.html" id="navintrobutton" onclick="fadetointroduction()">Introduction</div>
         <div href="work.html" id="navmyworkbutton" onclick="fadetomywork()">Portfolio</div>
         <div href="index.html" id="navshowreelbutton" onclick="fadetoshowreel()">Show reel</div>
     </div>
 </div>
 
-<div class="pagecontent">
-
+<div class="pagecontent" id="pagecontentid">
     <div class="leftcontent">
         <div id="lefttextid" class="lefttext">
         <div class="myname">Name Here</div>
@@ -39,7 +38,7 @@
         document.getElementById("lefttextid").style.transform = "translateY(64px)";
         document.getElementById("lefttextid").style.opacity = "100%";
         document.getElementById("lefttextid").style.transition = "2s";
-    }, 1000);
+    }, 250);
 
         setTimeout(function() {
         document.getElementById("rightcontentid").style.transform = "translateY(64px)";
@@ -48,40 +47,34 @@
     }, 500);
 
         setTimeout(function() {
-        document.getElementById("topnavid").style.transform = "translateY(64px)";
-        document.getElementById("topnavid").style.opacity = "100%";
-        document.getElementById("topnavid").style.transition = "2s";
-    }, 200);
-
-        setTimeout(function() {
         document.getElementById("continuebuttonid").style.opacity = "100%";
         document.getElementById("continuebuttonid").style.transition = "2s";
         document.getElementById("continuebuttonid").style.cursor = "pointer";
-    }, 2500);
+    }, 1500);
         document.getElementById("continuebuttonid").style.transform = "translateY(64px)";
     }
 
     function fade() {
-      document.getElementById("allid").style.opacity = "0%";
-      document.getElementById("allid").style.transition = "0.5s";
+      document.getElementById("pagecontentid").style.opacity = "0%";
+      document.getElementById("pagecontentid").style.transition = "0.5s";
       setTimeout( function() { window.location = "introduction.html" }, 500 );
     }
 
     function fadetoshowreel() {
-      document.getElementById("page").style.opacity = "0%";
-      document.getElementById("page").style.transition = "300ms";
+      document.getElementById("pagecontentid").style.opacity = "0%";
+      document.getElementById("pagecontentid").style.transition = "300ms";
       setTimeout( function() { window.location = "showreel.html" }, 300 );
     }
 
     function fadetomywork() {
-      document.getElementById("page").style.opacity = "0%";
-      document.getElementById("page").style.transition = "300ms";
+      document.getElementById("pagecontentid").style.opacity = "0%";
+      document.getElementById("pagecontentid").style.transition = "300ms";
       setTimeout( function() { window.location = "work.html" }, 300 );
     }
 
     function fadetointroduction() {
-      document.getElementById("page").style.opacity = "0%";
-      document.getElementById("page").style.transition = "300ms";
+      document.getElementById("pagecontentid").style.opacity = "0%";
+      document.getElementById("pagecontentid").style.transition = "300ms";
       setTimeout( function() { window.location = "introduction.html" }, 300 );
     }
 </script>
