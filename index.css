@@ -1,5 +1,5 @@
 body {
-    background-image: url(Background1.png);
+    background-color: rgb(61, 61, 61);
     background-size: cover;
     font-family: Tahoma, sans-serif;
     margin: 0;
@@ -7,17 +7,15 @@ body {
 }
 
 .all {
-    background-image: url(Background1.png);
+    background-color: rgb(27, 27, 27);
     background-size: cover;
-    background-blend-mode: luminosity;
-    background-color: black;
     width: 100%;
     height: 100vh;
     position:fixed
 }
 
 .topnav {
-    background-color: rgba(0, 0, 0, 0.555);
+    background-color: rgb(31, 31, 31);
     color: white;
     opacity: 0%;
     position: absolute;
@@ -54,7 +52,26 @@ a {
     display: flex;
     font-size: 22px;
     justify-content: center;
-    margin-right: 150px;
+    margin-right: 100px;
+}
+
+.topnav div:hover {
+    color: rgb(105, 34, 185);
+    transition: 0.3s;
+}
+
+.topnav a:hover {
+    color: rgb(105, 34, 185);
+    transition: 0.3s;
+}
+
+.navlinks div {
+    text-decoration: none;
+    color: white;
+    cursor: pointer;
+    margin: 19px;
+    margin-left: 20px;
+    margin-right: 20px;
 }
 
 @keyframes fadein {
@@ -95,8 +112,9 @@ a {
     margin: 10px;
     font-weight: bolder;
     opacity: 0%;
-    margin-top: 100px;
+    margin-top: 0px;
     width:fit-content;
+    color: white;
 }
 
 .rightcontent {

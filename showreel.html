@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>David Saggers Porfolio</title>
+    <link rel="stylesheet" href="showreel.css">
+</head>
+<body id="page" onload="opacityandtranslate()">
+<div class="topnav" id="topnavid">
+        <div class="home"><a href="index.html">Home</a></div>
+        <div class="navlinks">
+            <div href="introduction.html" id="navintrobutton" onclick="fadetointroduction()">Introduction</div>
+            <div href="work.html" id="navmyworkbutton" onclick="fadetomywork()">Portfolio</div>
+            <div href="index.html" id="navshowreelbutton" onclick="fadetoshowreel()"><b>Show Reel</b></div>
+        </div>
+    </div>
+    <div class="pagecontent">
+        <div class="onpagebuttons" id="onpagebuttonsid">
+        <div class="leftcontent">
+            <div id="leftnavbuttonid" class="leftnavbutton" onclick="fadetointroduction()">&lt;&lt;&lt; Introduction</div>
+        </div>
+
+        <div class="middlecontent" id="middlecontentid">
+            Show Reel
+        </div>
+
+        <div class="rightcontent">
+            <div id="rightnavbuttonid" class="rightnavbutton" onclick="fadetomywork()">Portfolio &gt;&gt;&gt;</div>
+        </div>
+    </div>
+    <div class="contentcontainer">
+        <div class="pagetextcontent">
+            About Me
+        </div>
+    </div>
+    </div>
+<script>
+    setTimeout(function() {
+        document.getElementById("topnavid").style.transform = "translateY(64px)";
+        document.getElementById("topnavid").style.transition = "2s";
+    }, 200);
+    
+    function fadetointroduction() {
+      document.getElementById("page").style.opacity = "0%";
+      document.getElementById("page").style.transition = "300ms";
+      setTimeout( function() { window.location = "introduction.html" }, 300 );
+    }
+
+    function fadetomywork() {
+      document.getElementById("page").style.opacity = "0%";
+      document.getElementById("page").style.transition = "300ms";
+      setTimeout( function() { window.location = "work.html" }, 300 );
+    }
+
+    function opacityandtranslate() {
+        document.getElementById("onpagebuttonsid").style.height = "75px";
+        document.getElementById("onpagebuttonsid").style.paddingTop = "66px";
+        document.getElementById("onpagebuttonsid").style.opacity = "100%";
+        document.getElementById("leftnavbuttonid").style.transform = "translateY(0px)";
+        document.getElementById("rightnavbuttonid").style.transform = "translateY(0px)";
+        document.getElementById("rightnavbuttonid").style.transform = "translateY(0px)";
+        document.getElementById("middlecontentid").style.transform = "translateY(0px)";
+        document.getElementById("onpagebuttonsid").style.transition = "2s";
+        document.getElementById("leftnavbuttonid").style.transition = "2s";
+        document.getElementById("rightnavbuttonid").style.transition = "2s";
+        document.getElementById("middlecontentid").style.transition = "2s";
+    }
+
+
+</script>
+</body>
+</html>
