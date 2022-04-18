@@ -5,15 +5,17 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>David Saggers Porfolio</title>
-    <link rel="stylesheet" href="work.css">
+    <link rel="stylesheet" href="introduction.css">
 </head>
 <body id="page" onload="opacityandtranslate()">
-<div class="topnav" id="topnavid">
-        <div class="home"><a href="index.html">Home</a></div>
-        <div class="navlinks">
-            <div href="introduction.html" id="navintrobutton" onclick="fadetointroduction()">Introduction</div>
-            <div href="work.html" id="navmyworkbutton" onclick="fadetomywork()"><b>Portfolio</b></div>
-            <div href="index.html" id="navshowreelbutton" onclick="fadetoshowreel()">Show Reel</div>
+    <div class="ovalrobotmorepictures" id="ovalrobotmorepicsid">
+        <div class="closeovalrobotbutton" onclick="closeovalrobot()">Close</div>
+        <div class="ovalrobotmorepicturesgallery">
+        <img src="ovalrobot1.png" class="ovalrobotgallerypictures">
+        <img src="ovalrobot2.png" class="ovalrobotgallerypictures">
+        </div>
+        <div class="ovalrobotmorepicturesgallery">
+        <img src="ovalrobot3.png" class="ovalrobotgallerypictures">
         </div>
     </div>
     <div class="pagecontent" id="pagecontentid">
@@ -23,6 +25,7 @@
         </div>
 
         <div class="middlecontent" id="middlecontentid">
+            <div class="myname">David Saggers</div>
             Portfolio
         </div>
 
@@ -32,38 +35,54 @@
     </div>
     <div class="contentcontainer">
         <div class="pagetextcontent">
-            About Me
+            <div class="ovalrobot">
+            <img src="ovalrobot1.png" class="ovalrobotexample">
+            <div class="nexttopicture">
+            Project - Oval Robot
+            <br>
+            This is a simple robot
+            <br>
+            <div class="seemoreovalrobotbutton" onclick="seemoreovalrobot()">See More</div>
+            </div>
+            </div>
+            </div>
         </div>
     </div>
     </div>
 <script>
     function fadetoshowreel() {
       document.getElementById("pagecontentid").style.opacity = "0%";
-      document.getElementById("pagecontentid").style.transition = "300ms";
-      setTimeout( function() { window.location = "showreel.html" }, 300 );
+      document.getElementById("pagecontentid").style.transition = "200ms";
+      setTimeout( function() { window.location = "showreel.html" }, 200 );
     }
 
     function fadetointroduction() {
       document.getElementById("pagecontentid").style.opacity = "0%";
-      document.getElementById("pagecontentid").style.transition = "300ms";
-      setTimeout( function() { window.location = "introduction.html" }, 300 );
+      document.getElementById("pagecontentid").style.transition = "200ms";
+      setTimeout( function() { window.location = "index.html" }, 200 );
     }
 
     function opacityandtranslate() {
         document.getElementById("onpagebuttonsid").style.height = "75px";
-        document.getElementById("onpagebuttonsid").style.paddingTop = "66px";
         document.getElementById("onpagebuttonsid").style.opacity = "100%";
+        document.getElementById("onpagebuttonsid").style.paddingBottom = "75px";
         document.getElementById("leftnavbuttonid").style.transform = "translateY(0px)";
         document.getElementById("rightnavbuttonid").style.transform = "translateY(0px)";
         document.getElementById("rightnavbuttonid").style.transform = "translateY(0px)";
         document.getElementById("middlecontentid").style.transform = "translateY(0px)";
-        document.getElementById("onpagebuttonsid").style.transition = "2s";
-        document.getElementById("leftnavbuttonid").style.transition = "2s";
-        document.getElementById("rightnavbuttonid").style.transition = "2s";
-        document.getElementById("middlecontentid").style.transition = "2s";
+        document.getElementById("onpagebuttonsid").style.transition = "1s";
+        document.getElementById("leftnavbuttonid").style.transition = "1s";
+        document.getElementById("rightnavbuttonid").style.transition = "1s";
+        document.getElementById("middlecontentid").style.transition = "1s";
     }
 
+    function seemoreovalrobot() {
+    document.getElementById("ovalrobotmorepicsid").style.height = "100%";
+    }
 
+    function closeovalrobot() {
+    document.getElementById("ovalrobotmorepicsid").style.height = "0px";
+    }
 </script>
 </body>
 </html>

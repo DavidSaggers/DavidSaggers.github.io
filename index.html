@@ -5,79 +5,58 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>David Saggers Porfolio</title>
-    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="introduction.css">
 </head>
 <body id="page" onload="opacityandtranslate()">
-<div class="all" id="allid">
-<div class="topnav" id="topnavid">
-    <div class="home"><a href="index.html">Home</a></div>
-    <div class="navlinks">
-        <div href="introduction.html" id="navintrobutton" onclick="fadetointroduction()">Introduction</div>
-        <div href="work.html" id="navmyworkbutton" onclick="fadetomywork()">Portfolio</div>
-        <div href="index.html" id="navshowreelbutton" onclick="fadetoshowreel()">Show reel</div>
-    </div>
-</div>
+    <div class="pagecontent" id="pagecontentid">
+        <div class="onpagebuttons" id="onpagebuttonsid">
+        <div class="leftcontent">
+            <div id="leftnavbuttonid" class="leftnavbutton" onclick="fadetomywork()">&lt;&lt;&lt; Portfolio</div>
+        </div>
 
-<div class="pagecontent" id="pagecontentid">
-    <div class="leftcontent">
-        <div id="lefttextid" class="lefttext">
-        <div class="myname">Name Here</div>
-        <div class="introduction">This is the area information will be</div>
+        <div class="middlecontent" id="middlecontentid">
+            <div class="myname">David Saggers</div>
+            Introduction
+        </div>
+
+        <div class="rightcontent">
+            <div id="rightnavbuttonid" class="rightnavbutton" onclick="fadetoshowreel()">Show Reel &gt;&gt;&gt;</div>
         </div>
     </div>
-
-    <div class="rightcontent" id="rightcontentid">
-        <div id="continuebuttonid" class="continuebutton" onclick="fade()">Continue</div>
+    <div class="contentcontainer">
+        <div class="pagetextcontent">
+            About Me
+        </div>
     </div>
-</div>
-</div>
-
+    </div>
 <script>
-    function opacityandtranslate() {
-        setTimeout(function() {
-        document.getElementById("lefttextid").style.transform = "translateY(64px)";
-        document.getElementById("lefttextid").style.opacity = "100%";
-        document.getElementById("lefttextid").style.transition = "2s";
-    }, 250);
-
-        setTimeout(function() {
-        document.getElementById("rightcontentid").style.transform = "translateY(64px)";
-        document.getElementById("rightcontentid").style.opacity = "100%";
-        document.getElementById("rightcontentid").style.transition = "2s";
-    }, 500);
-
-        setTimeout(function() {
-        document.getElementById("continuebuttonid").style.opacity = "100%";
-        document.getElementById("continuebuttonid").style.transition = "2s";
-        document.getElementById("continuebuttonid").style.cursor = "pointer";
-    }, 1500);
-        document.getElementById("continuebuttonid").style.transform = "translateY(64px)";
-    }
-
-    function fade() {
-      document.getElementById("pagecontentid").style.opacity = "0%";
-      document.getElementById("pagecontentid").style.transition = "0.5s";
-      setTimeout( function() { window.location = "introduction.html" }, 500 );
-    }
-
     function fadetoshowreel() {
       document.getElementById("pagecontentid").style.opacity = "0%";
-      document.getElementById("pagecontentid").style.transition = "300ms";
-      setTimeout( function() { window.location = "showreel.html" }, 300 );
+      document.getElementById("pagecontentid").style.transition = "200ms";
+      setTimeout( function() { window.location = "showreel.html" }, 200 );
     }
 
     function fadetomywork() {
       document.getElementById("pagecontentid").style.opacity = "0%";
-      document.getElementById("pagecontentid").style.transition = "300ms";
-      setTimeout( function() { window.location = "work.html" }, 300 );
+      document.getElementById("pagecontentid").style.transition = "200ms";
+      setTimeout( function() { window.location = "work.html" }, 200 );
     }
 
-    function fadetointroduction() {
-      document.getElementById("pagecontentid").style.opacity = "0%";
-      document.getElementById("pagecontentid").style.transition = "300ms";
-      setTimeout( function() { window.location = "introduction.html" }, 300 );
+    function opacityandtranslate() {
+        document.getElementById("onpagebuttonsid").style.height = "75px";
+        document.getElementById("onpagebuttonsid").style.opacity = "100%";
+        document.getElementById("onpagebuttonsid").style.paddingBottom = "75px";
+        document.getElementById("leftnavbuttonid").style.transform = "translateY(0px)";
+        document.getElementById("rightnavbuttonid").style.transform = "translateY(0px)";
+        document.getElementById("rightnavbuttonid").style.transform = "translateY(0px)";
+        document.getElementById("middlecontentid").style.transform = "translateY(0px)";
+        document.getElementById("onpagebuttonsid").style.transition = "1s";
+        document.getElementById("leftnavbuttonid").style.transition = "1s";
+        document.getElementById("rightnavbuttonid").style.transition = "1s";
+        document.getElementById("middlecontentid").style.transition = "1s";
     }
+
+
 </script>
-
 </body>
 </html>

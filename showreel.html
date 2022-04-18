@@ -5,17 +5,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>David Saggers Porfolio</title>
-    <link rel="stylesheet" href="showreel.css">
+    <link rel="stylesheet" href="introduction.css">
 </head>
 <body id="page" onload="opacityandtranslate()">
-<div class="topnav" id="topnavid">
-        <div class="home"><a href="index.html">Home</a></div>
-        <div class="navlinks">
-            <div href="introduction.html" id="navintrobutton" onclick="fadetointroduction()">Introduction</div>
-            <div href="work.html" id="navmyworkbutton" onclick="fadetomywork()">Portfolio</div>
-            <div href="index.html" id="navshowreelbutton" onclick="fadetoshowreel()"><b>Show Reel</b></div>
-        </div>
-    </div>
     <div class="pagecontent" id="pagecontentid">
         <div class="onpagebuttons" id="onpagebuttonsid">
         <div class="leftcontent">
@@ -23,6 +15,7 @@
         </div>
 
         <div class="middlecontent" id="middlecontentid">
+            <div class="myname">David Saggers</div>
             Show Reel
         </div>
 
@@ -39,28 +32,28 @@
 <script>
     function fadetointroduction() {
       document.getElementById("pagecontentid").style.opacity = "0%";
-      document.getElementById("pagecontentid").style.transition = "300ms";
-      setTimeout( function() { window.location = "introduction.html" }, 300 );
+      document.getElementById("pagecontentid").style.transition = "200ms";
+      setTimeout( function() { window.location = "index.html" }, 200 );
     }
 
     function fadetomywork() {
       document.getElementById("pagecontentid").style.opacity = "0%";
-      document.getElementById("pagecontentid").style.transition = "300ms";
-      setTimeout( function() { window.location = "work.html" }, 300 );
+      document.getElementById("pagecontentid").style.transition = "200ms";
+      setTimeout( function() { window.location = "work.html" }, 200 );
     }
 
     function opacityandtranslate() {
         document.getElementById("onpagebuttonsid").style.height = "75px";
-        document.getElementById("onpagebuttonsid").style.paddingTop = "66px";
         document.getElementById("onpagebuttonsid").style.opacity = "100%";
+        document.getElementById("onpagebuttonsid").style.paddingBottom = "75px";
         document.getElementById("leftnavbuttonid").style.transform = "translateY(0px)";
         document.getElementById("rightnavbuttonid").style.transform = "translateY(0px)";
         document.getElementById("rightnavbuttonid").style.transform = "translateY(0px)";
         document.getElementById("middlecontentid").style.transform = "translateY(0px)";
-        document.getElementById("onpagebuttonsid").style.transition = "2s";
-        document.getElementById("leftnavbuttonid").style.transition = "2s";
-        document.getElementById("rightnavbuttonid").style.transition = "2s";
-        document.getElementById("middlecontentid").style.transition = "2s";
+        document.getElementById("onpagebuttonsid").style.transition = "1s";
+        document.getElementById("leftnavbuttonid").style.transition = "1s";
+        document.getElementById("rightnavbuttonid").style.transition = "1s";
+        document.getElementById("middlecontentid").style.transition = "1s";
     }
 
 

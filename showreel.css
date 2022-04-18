@@ -144,7 +144,8 @@ a {
     margin-top: 22px;
     cursor: pointer;
     transform: translateY(-60px);
-    width: 175px;
+    width: 250px;
+    font-size: 150%;
 }
 
 .rightnavbutton {

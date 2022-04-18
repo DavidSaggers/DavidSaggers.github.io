@@ -104,7 +104,6 @@ a {
 .pagecontent{
     padding: 0px;
     margin: 0px;
-    display: block;
     width: 100%;
 }
 
@@ -126,26 +125,21 @@ a {
     width: 100%;
     padding: 0px;
     margin: 0px;
-    padding-top: 20px;
-    padding-left: 50px;
-    padding-right: 50px;
     position: fixed;
-    display: flex;
-    justify-content: center;
 }
 
 .pagetextcontent {
     font-size: 200%;
     margin: 0px;
     color: white;
-    text-align: center;
 }
 
 .rightnavbutton, .leftnavbutton {
-    margin-top: 22px;
+    margin-top: 50px;
     cursor: pointer;
     transform: translateY(-60px);
-    width: 175px;
+    width: 250px;
+    font-size: 150%;
 }
 
 .rightnavbutton {
@@ -157,4 +151,69 @@ a {
     transform: translateY(-100px);
     padding-top: 20px;
     font-size: 175%;
+    text-align: center;
+}
+
+.myname {
+    font-size: 120%;
+    padding-bottom: 20px;
+}
+
+.ovalrobot {
+   display: flex;
+}
+
+.ovalrobotexample {
+    height: 250px;
+    margin: 5px;
+    width: auto;
+    border: rgb(43, 43, 43) solid 5px;
+    position: relative;
+}
+
+.ovalrobotgallerypictures {
+    height: 400px;
+    margin: 5px;
+    width: auto;
+    border: rgb(43, 43, 43)  5px;
+    position: relative;
+}
+
+.nexttopicture {
+  padding-left: 10px;
+}
+
+.ovalrobotmorepictures {
+    height: 0px;
+    position: fixed;
+    overflow: scroll;
+    background-color: rgba(0, 0, 0, 0.884);
+    z-index: 999;
+    color: white;
+    width: 100%;
+    overflow-x: hidden;
+}
+
+.ovalrobotmorepicturesgallery {
+    overflow: hidden;
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 100px;
+    width: 100%
+    }
+
+.seemoreovalrobotbutton {
+    cursor: pointer;
+}
+
+.closeovalrobotbutton {
+    cursor: pointer;
+    text-align: center;
+    margin: 45%;
+    margin-top: 40px;
+    margin-bottom: 10px;
+    font-weight: bolder;
+    font-size: 150%;
+    width: 10%;
+    background-color: red;
 }
