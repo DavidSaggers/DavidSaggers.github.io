@@ -22,9 +22,6 @@ a {
     text-decoration: none;
     color: white;
     cursor: pointer;
-    margin: 19px;
-    margin-left: 20px;
-    margin-right: 20px;
 }
 
 .linktext {
@@ -175,12 +172,16 @@ a {
     height: 400px;
     margin: 5px;
     width: auto;
-    border: rgb(43, 43, 43)  5px;
+    border: rgb(43, 43, 43) solid 5px;
+    border-radius: 20px;
     position: relative;
 }
 
 .nexttopicture {
   padding-left: 10px;
+  text-align: center;
+  margin: auto;
+  margin-top: 10px;
 }
 
 .ovalrobotmorepictures {
@@ -209,11 +210,14 @@ a {
 .closeovalrobotbutton {
     cursor: pointer;
     text-align: center;
-    margin: 45%;
+    padding: 10px;
+    margin: auto;
     margin-top: 40px;
     margin-bottom: 10px;
     font-weight: bolder;
     font-size: 150%;
     width: 10%;
-    background-color: red;
+    background-color: rgb(64, 27, 88);
+    border:rgb(105, 34, 185) solid 5px;
+    border-radius: 50px;
 }
