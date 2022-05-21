@@ -1,16 +1,24 @@
+html {
+    min-width: fit-content;
+}
+
 body {
     background-color: rgb(61, 61, 61);
     background-size: cover;
-    width: auto;
     margin: 0;
     padding: 0;
     font-family: Tahoma, sans-serif;
     overflow-x: hidden;
+    box-sizing: border-box;
+    color: white;
+}
+
+.all {
+    opacity: 0%;
 }
 
 .text {
     text-align: center;
-    color: white;
     font-weight: bolder;
     margin-top: 250px;
     font-size: 80px;
@@ -20,13 +28,11 @@ body {
 
 a {
     text-decoration: none;
-    color: white;
     cursor: pointer;
 }
 
 .linktext {
     font-size: 45px;
-    color: white;
     cursor: pointer;
 }
 
@@ -37,7 +43,6 @@ a {
 
 .navlinks div {
     text-decoration: none;
-    color: white;
     cursor: pointer;
     margin: 19px;
     margin-left: 20px;
@@ -48,7 +53,6 @@ a {
 
 .topnav {
     background-color: rgb(31, 31, 31);
-    color: white;
     position: absolute;
     width: 100%;
     display: flex;
@@ -58,7 +62,6 @@ a {
 
 .linktext {
     font-size: 45px;
-    color: white;
 }
 
 .topnav div:hover {
@@ -102,74 +105,116 @@ a {
     padding: 0px;
     margin: 0px;
     width: 100%;
-}
-
-.onpagebuttons {
-    background-color: black;
-    display: flex;
-    justify-content: space-between;
-    padding-top: 0px;
-    height: 0px;
-    color: white;
-    font-weight: bold;
-    padding-left: 50px;
-    padding-right: 50px;
-    opacity: 0%;
-}
-
-.contentcontainer {
-    box-sizing: border-box;
-    width: 100%;
-    padding: 0px;
-    margin: 0px;
-    position: fixed;
-}
-
-.pagetextcontent {
-    font-size: 200%;
-    margin: 0px;
-    color: white;
-}
-
-.rightnavbutton, .leftnavbutton {
-    margin-top: 50px;
-    cursor: pointer;
-    transform: translateY(-60px);
-    width: 250px;
-    font-size: 150%;
-}
-
-.rightnavbutton {
-    text-align: right;
+    min-width: 100%;
 }
 
 .middlecontent {
     font-weight: bold;
-    transform: translateY(-100px);
     padding-top: 20px;
     font-size: 175%;
     text-align: center;
+    height: 100px;
+    height: 174px;
 }
 
-.myname {
-    font-size: 120%;
-    padding-bottom: 20px;
+.onpagebuttons {
+    background-color: rgb(27, 27, 27);
+    justify-content: space-between;
+    padding-top: 0px;
+    height: 175px;
+    font-weight: bold;
+    padding-left: 50px;
+    padding-right: 50px;
 }
 
-.ovalrobot {
-   display: flex;
+.topnavbuttons {
+    display: flex;
+    margin: 0;
+    padding: 9px;
 }
 
-.ovalrobotexample {
-    height: 250px;
-    margin: 5px;
-    width: auto;
+.topbackgroundimage {
+    background-color: rgb(34, 34, 34);
+    /* background-image: url(testbanner.png); */
+    background-size: cover;
+}
+
+.pagetextcontent {
+    font-size: 200%;
+    margin: auto;
+    width: 75%;
+    background-color: rgb(82, 82, 82);
+    border-left: rgb(27, 27, 27) solid 4px;
+    border-right: rgb(27, 27, 27) solid 4px;
+}
+
+.navbuttons {
+    text-align: center;
+    cursor: pointer;
+    width: 250px;
+    font-size: 150%;
+    border: rgba(132, 51, 199, 0.473) solid 4px;
+    border-radius: 15px;
+    background-color: rgb(46, 42, 54);
+    height: 30px;
+    margin: auto;
+}
+
+.navbuttons:hover {
+    border: rgba(87, 33, 131, 0.473) solid 4px;
+    border-radius: 15px;
+    background-color: rgb(27, 25, 32);
+}
+
+.navbuttonsactive {
+    text-align: center;
+    cursor: pointer;
+    width: 250px;
+    font-size: 150%;
+    height: 30px;
+    margin: auto;
+    border: rgba(189, 189, 189, 0.473) solid 4px;
+    border-radius: 15px;
+    background-color: rgb(66, 66, 66);
+}
+
+.segmentleft{
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 50px;
+    padding-right: 50px;
+    display: flex;
+    border-bottom: rgb(27, 27, 27) solid 4px;
+    min-width: fit-content;
+}
+
+.segmentright{
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 50px;
+    padding-right: 50px;
+    display: flex;
+    background-color: rgb(109, 109, 109);
+    border-bottom: rgb(27, 27, 27) solid 4px;
+    min-width: fit-content;
+ }
+
+.leftexamplepicture {
+    max-height: 15vmax;
+    max-width: auto;
+    margin: 15px;
     border: rgb(43, 43, 43) solid 5px;
-    position: relative;
+}
+
+.rightexamplepicture {
+    max-height: 15vmax;
+    max-width: auto;
+    margin: 15px;
+    border: rgb(43, 43, 43) solid 5px;
 }
 
 .ovalrobotgallerypictures {
-    height: 400px;
+    max-height: 20vmax;
     margin: 5px;
     width: auto;
     border: rgb(43, 43, 43) solid 5px;
@@ -178,10 +223,12 @@ a {
 }
 
 .nexttopicture {
-  padding-left: 10px;
   text-align: center;
   margin: auto;
   margin-top: 10px;
+  height: 300px;
+  border-collapse:collapse;
+  display : table;
 }
 
 .ovalrobotmorepictures {
@@ -190,7 +237,6 @@ a {
     overflow: scroll;
     background-color: rgba(0, 0, 0, 0.884);
     z-index: 999;
-    color: white;
     width: 100%;
     overflow-x: hidden;
 }
@@ -203,8 +249,25 @@ a {
     width: 100%
     }
 
-.seemoreovalrobotbutton {
+.seemorebuttonrow {
+    display : table-row;
+    vertical-align : bottom;
+    height: 0px;
+}
+
+.seemorebutton {
     cursor: pointer;
+    background-color: rgb(64, 27, 88);
+    border:rgb(105, 34, 185) solid 3px;
+    border-radius: 50px;
+    width: 250px;
+    margin: auto;
+}
+
+.seemorebutton:hover {
+    background-color: rgb(39, 17, 54);
+    border:rgb(66, 21, 117) solid 3px;
+    border-radius: 50px;
 }
 
 .closeovalrobotbutton {
@@ -218,6 +281,17 @@ a {
     font-size: 150%;
     width: 10%;
     background-color: rgb(64, 27, 88);
-    border:rgb(105, 34, 185) solid 5px;
+    border:rgb(105, 34, 185) solid 3px;
     border-radius: 50px;
+}
+
+.segmentmiddle {
+    margin: auto;
+    text-align: center;
+    height: 100vh;
+}
+
+.introductiontext {
+    padding: 40px;
+    padding-top: 15px;
 }

@@ -7,30 +7,39 @@
     <title>David Saggers Porfolio</title>
     <link rel="stylesheet" href="introduction.css">
 </head>
-<body id="page" onload="opacityandtranslate()">
+<body id="page" onload="opacity()">
+<div class="all" id="allid">
     <div class="pagecontent" id="pagecontentid">
-        <div class="onpagebuttons" id="onpagebuttonsid">
-        <div class="leftcontent">
-            <div id="leftnavbuttonid" class="leftnavbutton" onclick="fadetointroduction()">&lt;&lt;&lt; Introduction</div>
-        </div>
-
-        <div class="middlecontent" id="middlecontentid">
-            <div class="myname">David Saggers</div>
-            Show Reel
-        </div>
-
-        <div class="rightcontent">
-            <div id="rightnavbuttonid" class="rightnavbutton" onclick="fadetomywork()">Portfolio &gt;&gt;&gt;</div>
-        </div>
-    </div>
-    <div class="contentcontainer">
-        <div class="pagetextcontent">
-            About Me
-        </div>
+        <div class="topbackgroundimage">
+            <div class="middlecontent" id="middlecontentid">
+                <div class="myname">David Saggers</div>
+                Introduction
+            </div>
+            <div class="topnavbuttons">
+                <div class="navbuttons" onclick="fadetomywork()">Portfolio</div>
+                <div class="navbuttons" onclick="fadetoaboutme()">About Me</div>
+                <div class="navbuttonsactive" onclick="fadetoshowreel()">Show Reel</div>
+            </div>
+            </div>
+    <div class="pagetextcontent">
+        <div class="segmentmiddle">VIDEO</div>
     </div>
     </div>
+    </div>
+</div>
 <script>
-    function fadetointroduction() {
+    function opacity() {
+        document.getElementById("allid").style.opacity = "100%";
+        document.getElementById("allid").style.transition = "0.5s";
+    }
+
+    function fadetoshowreel() {
+      document.getElementById("pagecontentid").style.opacity = "0%";
+      document.getElementById("pagecontentid").style.transition = "200ms";
+      setTimeout( function() { window.location = "showreel.html" }, 200 );
+    }
+
+    function fadetoaboutme() {
       document.getElementById("pagecontentid").style.opacity = "0%";
       document.getElementById("pagecontentid").style.transition = "200ms";
       setTimeout( function() { window.location = "index.html" }, 200 );
@@ -41,21 +50,6 @@
       document.getElementById("pagecontentid").style.transition = "200ms";
       setTimeout( function() { window.location = "work.html" }, 200 );
     }
-
-    function opacityandtranslate() {
-        document.getElementById("onpagebuttonsid").style.height = "75px";
-        document.getElementById("onpagebuttonsid").style.opacity = "100%";
-        document.getElementById("onpagebuttonsid").style.paddingBottom = "75px";
-        document.getElementById("leftnavbuttonid").style.transform = "translateY(0px)";
-        document.getElementById("rightnavbuttonid").style.transform = "translateY(0px)";
-        document.getElementById("rightnavbuttonid").style.transform = "translateY(0px)";
-        document.getElementById("middlecontentid").style.transform = "translateY(0px)";
-        document.getElementById("onpagebuttonsid").style.transition = "1s";
-        document.getElementById("leftnavbuttonid").style.transition = "1s";
-        document.getElementById("rightnavbuttonid").style.transition = "1s";
-        document.getElementById("middlecontentid").style.transition = "1s";
-    }
-
 
 </script>
 </body>

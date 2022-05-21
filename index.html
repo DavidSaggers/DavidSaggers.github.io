@@ -7,33 +7,51 @@
     <title>David Saggers Porfolio</title>
     <link rel="stylesheet" href="introduction.css">
 </head>
-<body id="page" onload="opacityandtranslate()">
+<body id="page" onload="opacity()">
+<div class="all" id="allid">
     <div class="pagecontent" id="pagecontentid">
-        <div class="onpagebuttons" id="onpagebuttonsid">
-        <div class="leftcontent">
-            <div id="leftnavbuttonid" class="leftnavbutton" onclick="fadetomywork()">&lt;&lt;&lt; Portfolio</div>
-        </div>
-
+        <div class="topbackgroundimage">
         <div class="middlecontent" id="middlecontentid">
             <div class="myname">David Saggers</div>
             Introduction
         </div>
-
-        <div class="rightcontent">
-            <div id="rightnavbuttonid" class="rightnavbutton" onclick="fadetoshowreel()">Show Reel &gt;&gt;&gt;</div>
+        <div class="topnavbuttons">
+            <div class="navbuttons" onclick="fadetomywork()">Portfolio</div>
+            <div class="navbuttonsactive" onclick="fadetoaboutme()">About Me</div>
+            <div class="navbuttons" onclick="fadetoshowreel()">Show Reel</div>
         </div>
-    </div>
-    <div class="contentcontainer">
+        </div>
         <div class="pagetextcontent">
-            About Me
+            <div class="segmentmiddle">
+                <div class="introductiontext">
+                Welcome to my portfolio website, I am David Saggers, I have always been interested in game art and 3D design, 
+                I studied Art & Design and Media in college and I have been using software like photoshop and premier pro for a few years,
+                but more recently I started using blender and I have been enjoying creating 3d models and im very driven towards learning and making
+                good looking models.
+                <br>
+                <br>
+                Here is some of my work, a portfolio of what I have created and a video showcasing the models in more detail.
+                </div>
+            </div>
         </div>
     </div>
-    </div>
+</div>
 <script>
+    function opacity() {
+        document.getElementById("allid").style.opacity = "100%";
+        document.getElementById("allid").style.transition = "0.5s";
+    }
+
     function fadetoshowreel() {
       document.getElementById("pagecontentid").style.opacity = "0%";
       document.getElementById("pagecontentid").style.transition = "200ms";
       setTimeout( function() { window.location = "showreel.html" }, 200 );
+    }
+
+    function fadetoaboutme() {
+      document.getElementById("pagecontentid").style.opacity = "0%";
+      document.getElementById("pagecontentid").style.transition = "200ms";
+      setTimeout( function() { window.location = "index.html" }, 200 );
     }
 
     function fadetomywork() {
@@ -41,21 +59,6 @@
       document.getElementById("pagecontentid").style.transition = "200ms";
       setTimeout( function() { window.location = "work.html" }, 200 );
     }
-
-    function opacityandtranslate() {
-        document.getElementById("onpagebuttonsid").style.height = "75px";
-        document.getElementById("onpagebuttonsid").style.opacity = "100%";
-        document.getElementById("onpagebuttonsid").style.paddingBottom = "75px";
-        document.getElementById("leftnavbuttonid").style.transform = "translateY(0px)";
-        document.getElementById("rightnavbuttonid").style.transform = "translateY(0px)";
-        document.getElementById("rightnavbuttonid").style.transform = "translateY(0px)";
-        document.getElementById("middlecontentid").style.transform = "translateY(0px)";
-        document.getElementById("onpagebuttonsid").style.transition = "1s";
-        document.getElementById("leftnavbuttonid").style.transition = "1s";
-        document.getElementById("rightnavbuttonid").style.transition = "1s";
-        document.getElementById("middlecontentid").style.transition = "1s";
-    }
-
 
 </script>
 </body>
