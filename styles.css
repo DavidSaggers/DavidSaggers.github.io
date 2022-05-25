@@ -3,18 +3,25 @@ html {
 }
 
 body {
-    background-color: rgb(61, 61, 61);
+    background-color: #dad3d6;
     background-size: cover;
     margin: 0;
     padding: 0;
     font-family: Tahoma, sans-serif;
     overflow-x: hidden;
     box-sizing: border-box;
-    color: white;
+    color: #1a1a19;
 }
 
 .all {
     opacity: 0%;
+}
+
+.topbackgroundimage {
+    background-color: #beb8bb;
+    /* background-image: url(testbanner.png); */
+    background-size: cover;
+    border-bottom: 2px solid rgb(37, 37, 37);
 }
 
 .text {
@@ -51,27 +58,8 @@ a {
     text-align: center;
 }
 
-.topnav {
-    background-color: rgb(31, 31, 31);
-    position: absolute;
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    z-index: 99;
-}
-
 .linktext {
     font-size: 45px;
-}
-
-.topnav div:hover {
-    color: rgb(105, 34, 185);
-    transition: 0.3s;
-}
-
-.topnav a:hover {
-    color: rgb(105, 34, 185);
-    transition: 0.3s;
 }
 
 .navlinks {
@@ -114,29 +102,13 @@ a {
     font-size: 175%;
     text-align: center;
     height: 100px;
-    height: 174px;
-}
-
-.onpagebuttons {
-    background-color: rgb(27, 27, 27);
-    justify-content: space-between;
-    padding-top: 0px;
-    height: 175px;
-    font-weight: bold;
-    padding-left: 50px;
-    padding-right: 50px;
+    height: 75px;
 }
 
 .topnavbuttons {
     display: flex;
     margin: 0;
     padding: 9px;
-}
-
-.topbackgroundimage {
-    background-color: rgb(34, 34, 34);
-    /* background-image: url(testbanner.png); */
-    background-size: cover;
 }
 
 .pagetextcontent {
@@ -153,17 +125,13 @@ a {
     cursor: pointer;
     width: 250px;
     font-size: 150%;
-    border: rgba(132, 51, 199, 0.473) solid 4px;
-    border-radius: 15px;
-    background-color: rgb(46, 42, 54);
+    color: rgb(45, 46, 49);
     height: 30px;
     margin: auto;
 }
 
 .navbuttons:hover {
-    border: rgba(87, 33, 131, 0.473) solid 4px;
-    border-radius: 15px;
-    background-color: rgb(27, 25, 32);
+    color: rgb(30, 100, 230);
 }
 
 .navbuttonsactive {
@@ -173,9 +141,8 @@ a {
     font-size: 150%;
     height: 30px;
     margin: auto;
-    border: rgba(189, 189, 189, 0.473) solid 4px;
-    border-radius: 15px;
-    background-color: rgb(66, 66, 66);
+    color: rgb(0, 38, 255);
+    font-weight: bold;
 }
 
 .segmentleft{
@@ -184,6 +151,7 @@ a {
     padding-left: 50px;
     padding-right: 50px;
     display: flex;
+    background-color: rgb(204, 204, 204);
     border-bottom: rgb(27, 27, 27) solid 4px;
     min-width: fit-content;
 }
@@ -194,7 +162,7 @@ a {
     padding-left: 50px;
     padding-right: 50px;
     display: flex;
-    background-color: rgb(109, 109, 109);
+    background-color: rgb(177, 177, 177);
     border-bottom: rgb(27, 27, 27) solid 4px;
     min-width: fit-content;
  }
@@ -213,11 +181,11 @@ a {
     border: rgb(43, 43, 43) solid 5px;
 }
 
-.ovalrobotgallerypictures {
+.gallerypictures {
     max-height: 20vmax;
     margin: 5px;
     width: auto;
-    border: rgb(43, 43, 43) solid 5px;
+    border: rgb(112, 112, 112) solid 5px;
     border-radius: 20px;
     position: relative;
 }
@@ -227,11 +195,11 @@ a {
   margin: auto;
   margin-top: 10px;
   height: 300px;
-  border-collapse:collapse;
+  border-collapse: collapse;
   display : table;
 }
 
-.ovalrobotmorepictures {
+.showmorepictures {
     height: 0px;
     position: fixed;
     overflow: scroll;
@@ -241,13 +209,13 @@ a {
     overflow-x: hidden;
 }
 
-.ovalrobotmorepicturesgallery {
+.morepicturesgallery {
     overflow: hidden;
     display: flex;
     justify-content: space-evenly;
     margin-top: 100px;
     width: 100%
-    }
+}
 
 .seemorebuttonrow {
     display : table-row;
@@ -257,20 +225,17 @@ a {
 
 .seemorebutton {
     cursor: pointer;
-    background-color: rgb(64, 27, 88);
-    border:rgb(105, 34, 185) solid 3px;
+    color: rgb(45, 46, 49);
     border-radius: 50px;
     width: 250px;
     margin: auto;
 }
 
 .seemorebutton:hover {
-    background-color: rgb(39, 17, 54);
-    border:rgb(66, 21, 117) solid 3px;
-    border-radius: 50px;
+    color: rgb(30, 100, 230);
 }
 
-.closeovalrobotbutton {
+.closegallerybutton {
     cursor: pointer;
     text-align: center;
     padding: 10px;
@@ -280,18 +245,25 @@ a {
     font-weight: bolder;
     font-size: 150%;
     width: 10%;
-    background-color: rgb(64, 27, 88);
-    border:rgb(105, 34, 185) solid 3px;
-    border-radius: 50px;
+    color: #d1cbce;
+}
+
+.closegallerybutton:hover {
+    color: rgb(30, 100, 230);
 }
 
 .segmentmiddle {
     margin: auto;
     text-align: center;
     height: 100vh;
+    background-color: rgb(204, 204, 204);
 }
 
 .introductiontext {
     padding: 40px;
     padding-top: 15px;
+}
+
+.sampletext {
+    font-size: 16pt;
 }
