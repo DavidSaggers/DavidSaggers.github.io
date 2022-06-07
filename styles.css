@@ -3,7 +3,7 @@ html {
 }
 
 body {
-    background-color: #dad3d6;
+    background-color: #faf9f9;
     background-size: cover;
     margin: 0;
     padding: 0;
@@ -18,10 +18,9 @@ body {
 }
 
 .topbackgroundimage {
-    background-color: #beb8bb;
-    /* background-image: url(testbanner.png); */
+    background-color: #f0f0f0;
     background-size: cover;
-    border-bottom: 2px solid rgb(37, 37, 37);
+    border-bottom: 1px solid rgb(249, 226, 255);
 }
 
 .text {
@@ -115,9 +114,9 @@ a {
     font-size: 200%;
     margin: auto;
     width: 75%;
-    background-color: rgb(82, 82, 82);
-    border-left: rgb(27, 27, 27) solid 4px;
-    border-right: rgb(27, 27, 27) solid 4px;
+    background-color: rgb(245, 240, 240);
+    border-left: rgb(27, 27, 27) solid 2px;
+    border-right: rgb(27, 27, 27) solid 2px;
 }
 
 .navbuttons {
@@ -132,6 +131,7 @@ a {
 
 .navbuttons:hover {
     color: rgb(30, 100, 230);
+    transition: 0.3s;
 }
 
 .navbuttonsactive {
@@ -145,14 +145,26 @@ a {
     font-weight: bold;
 }
 
+.segmentlefttop{
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 50px;
+    padding-right: 50px;
+    display: flex;
+    background-color: rgb(236, 231, 231);
+    border-bottom: rgb(41, 37, 41) solid 2px;
+    min-width: fit-content;
+    border-top: rgb(41, 37, 41) solid 2px;
+}
+
 .segmentleft{
     padding-top: 10px;
     padding-bottom: 10px;
     padding-left: 50px;
     padding-right: 50px;
     display: flex;
-    background-color: rgb(204, 204, 204);
-    border-bottom: rgb(27, 27, 27) solid 4px;
+    background-color: rgb(236, 231, 231);
+    border-bottom: rgb(41, 37, 41) solid 2px;
     min-width: fit-content;
 }
 
@@ -162,8 +174,8 @@ a {
     padding-left: 50px;
     padding-right: 50px;
     display: flex;
-    background-color: rgb(177, 177, 177);
-    border-bottom: rgb(27, 27, 27) solid 4px;
+    background-color: rgb(223, 219, 219);
+    border-bottom: rgb(41, 37, 41) solid 2px;
     min-width: fit-content;
  }
 
@@ -172,6 +184,7 @@ a {
     max-width: auto;
     margin: 15px;
     border: rgb(43, 43, 43) solid 5px;
+    cursor: pointer;
 }
 
 .rightexamplepicture {
@@ -179,6 +192,7 @@ a {
     max-width: auto;
     margin: 15px;
     border: rgb(43, 43, 43) solid 5px;
+    cursor: pointer;
 }
 
 .gallerypictures {
@@ -252,6 +266,23 @@ a {
     color: rgb(30, 100, 230);
 }
 
+.togglebrightbutton {
+    cursor: pointer;
+    text-align: center;
+    padding: 10px;
+    margin: auto;
+    margin-top: 40px;
+    margin-bottom: 10px;
+    font-weight: bolder;
+    font-size: 150%;
+    width: 15%;
+    color: #d1cbce;
+}
+
+.togglebrightbutton:hover {
+    color: rgb(30, 100, 230);
+}
+
 .segmentmiddle {
     margin: auto;
     text-align: center;
@@ -266,4 +297,25 @@ a {
 
 .sampletext {
     font-size: 16pt;
+}
+
+.aboutmebuttons {
+    display: flex;
+}
+
+.aboutmebuttonpictures {
+    height: 270px;
+    width: 480px;
+    margin: auto;
+    margin-top: 15px;
+    border: rgb(112, 112, 112) solid 5px;
+    border-radius: 20px;
+    position: relative;
+    background-image: url(axe1.png);
+    background-size: contain;
+    color: white;
+}
+
+.aboutmebuttontext {
+    margin-top: 110px;
 }

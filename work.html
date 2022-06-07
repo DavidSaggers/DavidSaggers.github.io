@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>David Saggers Porfolio</title>
+    <title>David Saggers Portfolio</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body id="page" onload="opacity()">
@@ -54,17 +54,20 @@
     <!-- Street Overlay Start -->
     <div class="showmorepictures" id="streetmorepicsid">
         <div class="closegallerybutton" onclick="closestreet()">Close</div>
+        <div class="togglebrightbutton" id="brightnessbutton" onclick="brightenimages()">Toggle Brighter Images for darker screens</div>
+        <div id="streetimageid" class="streetimagesclass">
         <div class="morepicturesgallery">
-            <a href="https://davidsaggers.github.io/Street1.png" target="_blank"><img src="Street1.png" class="gallerypictures"></a>
-            <a href="https://davidsaggers.github.io/Street2.png" target="_blank"><img src="Street2.png" class="gallerypictures"></a>
+            <a href="https://davidsaggers.github.io/Street1.png" target="_blank"><img  src="Street1.png" class="gallerypictures"></a>
+            <a href="https://davidsaggers.github.io/Street2.png" target="_blank"><img  src="Street2.png" class="gallerypictures"></a>
         </div>
         <div class="morepicturesgallery">
-            <a href="https://davidsaggers.github.io/Streetday1.png" target="_blank"><img src="Streetday1.png" class="gallerypictures"></a>
-            <a href="https://davidsaggers.github.io/Streedday2.png" target="_blank"><img src="Streetday2.png" class="gallerypictures"></a>
+            <a href="https://davidsaggers.github.io/Streetday1.png" target="_blank"><img  src="Streetday1.png" class="gallerypictures"></a>
+            <a href="https://davidsaggers.github.io/Streedday2.png" target="_blank"><img  src="Streetday2.png" class="gallerypictures"></a>
         </div>
         <div class="morepicturesgallery">
-            <a href="https://davidsaggers.github.io/Streetnight1.png" target="_blank"><img src="Streetnight1.png" class="gallerypictures"></a>
-            <a href="https://davidsaggers.github.io/Streetnightbright.png" target="_blank"><img src="Streetnightbright.png" class="gallerypictures"></a>
+            <a href="https://davidsaggers.github.io/Streetnight1.png" target="_blank"><img  src="Streetnight1.png" class="gallerypictures"></a>
+            <a href="https://davidsaggers.github.io/Streetnightbright.png" target="_blank"><img  src="Streetnightbright.png" class="gallerypictures"></a>
+        </div>
         </div>
         <br><br>
     </div>
@@ -83,8 +86,8 @@
             </div>
     </div>
         <div class="pagetextcontent">
-            <div class="segmentleft"> <!--Axe Start-->
-                <img src="axe1.png" class="leftexamplepicture">
+            <div class="segmentlefttop"> <!--Axe Start-->
+                <img src="axe1.png" class="leftexamplepicture" onclick="seemoreaxe()">
                 <div class="nexttopicture">
                 Project - Leviathan Axe
                 <br>
@@ -101,17 +104,17 @@
                 Project - City Street
                 <br>
                 <span class="sampletext">
-                I created this city street and wanted to try out lighting with the cycles rendering engine in blender which has ray tracing, I experimented with different settings
+                I created this city street and wanted to experement with raytraced lighting using the cycles rendering engine used in blender, I experimented with different settings
                 for rendering and learned about render samples and denoising. The renders with this engine turned out very noisy or blurry with a denoiser active. The simpler Eevee render
                 engine did not have any noise however lacked lighting details.
                 </span>
                 <br>
                 <div class="seemorebuttonrow"><div class="seemorebutton" onclick="seemorestreet()">See More</div></div>
                 </div>
-                <img src="Street1.png" class="rightexamplepicture">
+                <img src="Street1.png" class="rightexamplepicture" onclick="seemorestreet()">
             </div> <!--Street End-->
             <div class="segmentleft"> <!--Bed Room Start-->
-                <img src="room1.png" class="leftexamplepicture">
+                <img src="room1.png" class="leftexamplepicture" onclick="seemorebedroom()">
                 <div class="nexttopicture">
                 Project - Bedroom
                 <br>
@@ -132,7 +135,7 @@
                 <br>
                 <div class="seemorebuttonrow"><div class="seemorebutton" onclick="seemoreovalrobot()">See More</div></div>
                 </div>
-                <img src="ovalrobot1.png" class="rightexamplepicture">
+                <img src="ovalrobot1.png" class="rightexamplepicture" onclick="seemoreovalrobot()">
             </div> <!--Oval Robot End-->
             </div> <!--Text Page Content-->
             <br>
@@ -196,11 +199,21 @@
     function seemorestreet() {
     document.getElementById("streetmorepicsid").style.height = "100%";
     document.getElementById("page").style.overflow = "hidden";
+    document.getElementById("streetimageid").style.filter = "brightness(1)";
     }
 
     function closestreet() {
     document.getElementById("streetmorepicsid").style.height = "0px";
     document.getElementById("page").style.overflow = "auto";
+    }
+
+    function brightenimages() {
+        var x = document.getElementById("streetimageid");
+        if (x.style.filter === "brightness(1)") {
+            x.style.filter = "brightness(2)";
+        } else {
+            x.style.filter = "brightness(1)";
+        }
     }
 </script>
 </body>
