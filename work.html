@@ -54,7 +54,7 @@
     <!-- Street Overlay Start -->
     <div class="showmorepictures" id="streetmorepicsid">
         <div class="closegallerybutton" onclick="closestreet()">Close</div>
-        <div class="togglebrightbutton" id="brightnessbutton" onclick="brightenimages()">Toggle Brighter Images for darker screens</div>
+        <div class="togglebrightbutton" id="brightnessbutton" onclick="brightenimagesstreet()">Toggle Brighter Images for darker screens</div>
         <div id="streetimageid" class="streetimagesclass">
         <div class="morepicturesgallery">
             <a href="https://davidsaggers.github.io/Street1.png" target="_blank"><img  src="Street1.png" class="gallerypictures"></a>
@@ -62,16 +62,43 @@
         </div>
         <div class="morepicturesgallery">
             <a href="https://davidsaggers.github.io/Streetday1.png" target="_blank"><img  src="Streetday1.png" class="gallerypictures"></a>
-            <a href="https://davidsaggers.github.io/Streedday2.png" target="_blank"><img  src="Streetday2.png" class="gallerypictures"></a>
+            <a href="https://davidsaggers.github.io/Streetday2.png" target="_blank"><img  src="Streetday2.png" class="gallerypictures"></a>
         </div>
         <div class="morepicturesgallery">
             <a href="https://davidsaggers.github.io/Streetnight1.png" target="_blank"><img  src="Streetnight1.png" class="gallerypictures"></a>
             <a href="https://davidsaggers.github.io/Streetnightbright.png" target="_blank"><img  src="Streetnightbright.png" class="gallerypictures"></a>
         </div>
         </div>
-        <br><br>
     </div>
-    <!-- Street Overlay End -->
+     <!-- Street Overlay End -->
+     <!-- Shark Overlay Start -->
+        <div class="showmorepictures" id="sharkmorepicsid">
+            <div class="closegallerybutton" onclick="closeshark()">Close</div>
+            <div class="togglebrightbutton" id="brightnessbutton" onclick="brightenimagesshark()">Toggle Brighter Images for darker screens</div>
+            <div id="sharkimageid" class="streetimagesclass">
+            <div class="morepicturesgallery">
+                <a href="https://davidsaggers.github.io/shark1.png" target="_blank"><img  src="shark1.png" class="gallerypictures"></a>
+                <a href="https://davidsaggers.github.io/shark2.png" target="_blank"><img  src="shark2.png" class="gallerypictures"></a>
+            </div>
+            <div class="morepicturesgallery">
+                <a href="https://davidsaggers.github.io/shark3.png" target="_blank"><img  src="shark3.png" class="gallerypictures"></a>
+                <a href="https://davidsaggers.github.io/shark4.png" target="_blank"><img  src="shark4.png" class="gallerypictures"></a>
+            </div>
+            <div class="morepicturesgallery">
+                <a href="https://davidsaggers.github.io/shark5.png" target="_blank"><img  src="shark5.png" class="gallerypictures"></a>
+                <a href="https://davidsaggers.github.io/shark6.png" target="_blank"><img  src="shark6.png" class="gallerypictures"></a>
+            </div>
+            <div class="morepicturesgallery">
+                <a href="https://davidsaggers.github.io/sharkengine.png" target="_blank"><img  src="sharkengine.png" class="gallerypictures"></a>
+                <a href="https://davidsaggers.github.io/SharkPlan.png" target="_blank"><img  src="SharkPlan.png" class="gallerypictures"></a>
+            </div>
+            <div class="morepicturesgallery">
+                <a href="https://davidsaggers.github.io/SharkBrass.png" target="_blank"><img  src="SharkBrass.png" class="gallerypictures"></a>
+            </div>
+            </div>
+            <br><br>
+        </div>
+    <!-- Shark Overlay End -->
     <div class="pagecontent" id="pagecontentid">
         <div class="topbackgroundimage">
             <div class="middlecontent" id="middlecontentid">
@@ -89,53 +116,66 @@
             <div class="segmentlefttop"> <!--Axe Start-->
                 <img src="axe1.png" class="leftexamplepicture" onclick="seemoreaxe()">
                 <div class="nexttopicture">
-                Project - Leviathan Axe
+                Leviathan Axe
                 <br>
                 <span class="sampletext">
                 This was my attempt at creating the leviathan axe from God of War. while creating this I learned how to UV unwrap and texture objects, how to use modifiers
                 such as multi-resolution, subdivision surface and shrink wrap and how to make a normal maps from a high poly mesh to be applied to a lower poly mesh.
                 </span>
                 <br>
-                <div class="seemorebuttonrow"><div class="seemorebutton" onclick="seemoreaxe()">See More</div></div>
+                <div class="seemorebuttonrow"><div class="seemorebutton" onclick="seemoreaxe()">See More Images</div></div>
                 </div>
             </div> <!--Axe End-->
-            <div class="segmentright"> <!--Street Start-->
+            <div class="segmentright"> <!--Shark Start-->
                 <div class="nexttopicture">
-                Project - City Street
+                Mechanical Hammerhead Shark
                 <br>
                 <span class="sampletext">
-                I created this city street and wanted to experement with raytraced lighting using the cycles rendering engine used in blender, I experimented with different settings
+                I created this Mechanical Hammerhead Shark as I am very interested in both ocean life and the mechanical/steampunk style so I wanted to combine to two to make something unique.
+                with this model I learned how to rig a model and animate it, how to create a glass effect and how to use nodes to create an ocean enviroment.
+                </span>
+                <br>
+                <div class="seemorebuttonrow"><div class="seemorebutton" onclick="seemoreshark()">See More Images</div></div>
+                </div>
+                <img src="shark1.png" class="leftexamplepicture" onclick="seemoreaxe()">
+            </div> <!--Shark End-->
+            <div class="segmentleft"> <!--Street Start-->
+                <img src="Street1.png" class="rightexamplepicture" onclick="seemorestreet()">
+                <div class="nexttopicture">
+                City Street
+                <br>
+                <span class="sampletext">
+                I created this city street and wanted to experiment with raytraced lighting using the cycles rendering engine used in blender, I experimented with different settings
                 for rendering and learned about render samples and denoising. The renders with this engine turned out very noisy or blurry with a denoiser active. The simpler Eevee render
                 engine did not have any noise however lacked lighting details.
                 </span>
                 <br>
-                <div class="seemorebuttonrow"><div class="seemorebutton" onclick="seemorestreet()">See More</div></div>
+                <div class="seemorebuttonrow"><div class="seemorebutton" onclick="seemorestreet()">See More Images</div></div>
                 </div>
-                <img src="Street1.png" class="rightexamplepicture" onclick="seemorestreet()">
             </div> <!--Street End-->
-            <div class="segmentleft"> <!--Bed Room Start-->
-                <img src="room1.png" class="leftexamplepicture" onclick="seemorebedroom()">
+            <div class="segmentright"> <!--Bed Room Start-->
                 <div class="nexttopicture">
-                Project - Bedroom
+                Bedroom
                 <br>
                 <span class="sampletext">
-                This was my first attempt at making an enviroment, and my first time using very basic modifiers and physics settings within blender and at modelling to scale.
+                This was my first attempt at making an environment, and my first time using very basic modifiers and physics settings within blender and at modelling to scale.
                 </span>
                 <br>
-                <div class="seemorebuttonrow"><div class="seemorebutton" onclick="seemorebedroom()">See More</div></div>
+                <div class="seemorebuttonrow"><div class="seemorebutton" onclick="seemorebedroom()">See More Images</div></div>
                 </div>
+                <img src="room1.png" class="leftexamplepicture" onclick="seemorebedroom()">
             </div> <!--Bedroom End-->
-            <div class="segmentright"> <!--Oval Robot Start-->
+            <div class="segmentleft"> <!--Oval Robot Start-->
+                <img src="ovalrobot1.png" class="rightexamplepicture" onclick="seemoreovalrobot()">
                 <div class="nexttopicture">
-                Project - Oval Robot
+                Oval Robot
                 <br>
                 <span class="sampletext">
                 This was one of my first blender creations where I learned about basic colouring and materials and applying them to an object without UV unwrapping.
                 </span>
                 <br>
-                <div class="seemorebuttonrow"><div class="seemorebutton" onclick="seemoreovalrobot()">See More</div></div>
+                <div class="seemorebuttonrow"><div class="seemorebutton" onclick="seemoreovalrobot()">See More Images</div></div>
                 </div>
-                <img src="ovalrobot1.png" class="rightexamplepicture" onclick="seemoreovalrobot()">
             </div> <!--Oval Robot End-->
             </div> <!--Text Page Content-->
             <br>
@@ -207,8 +247,28 @@
     document.getElementById("page").style.overflow = "auto";
     }
 
-    function brightenimages() {
+    function seemoreshark() {
+    document.getElementById("sharkmorepicsid").style.height = "100%";
+    document.getElementById("page").style.overflow = "hidden";
+    document.getElementById("sharkimageid").style.filter = "brightness(1)";
+    }
+
+    function closeshark() {
+    document.getElementById("sharkmorepicsid").style.height = "0px";
+    document.getElementById("page").style.overflow = "auto";
+    }
+
+    function brightenimagesstreet() {
         var x = document.getElementById("streetimageid");
+        if (x.style.filter === "brightness(1)") {
+            x.style.filter = "brightness(2)";
+        } else {
+            x.style.filter = "brightness(1)";
+        }
+    }
+
+    function brightenimagesshark() {
+        var x = document.getElementById("sharkimageid");
         if (x.style.filter === "brightness(1)") {
             x.style.filter = "brightness(2)";
         } else {

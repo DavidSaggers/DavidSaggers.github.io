@@ -20,7 +20,7 @@ body {
 .topbackgroundimage {
     background-color: #f0f0f0;
     background-size: cover;
-    border-bottom: 1px solid rgb(249, 226, 255);
+    border-bottom: 1px solid rgb(214, 173, 224);
 }
 
 .text {
@@ -299,23 +299,6 @@ a {
     font-size: 16pt;
 }
 
-.aboutmebuttons {
-    display: flex;
-}
-
-.aboutmebuttonpictures {
-    height: 270px;
-    width: 480px;
-    margin: auto;
-    margin-top: 15px;
-    border: rgb(112, 112, 112) solid 5px;
-    border-radius: 20px;
-    position: relative;
-    background-image: url(axe1.png);
-    background-size: contain;
-    color: white;
-}
-
-.aboutmebuttontext {
-    margin-top: 110px;
+.video {
+    margin-top: 16px;
 }
